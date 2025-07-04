@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    <h1>Votação</h1>
+    <form action="{{ url_for('votar') }}" method="post">
+        <label for="">Nome: </label>
+        <input type="text" name="nome" id="">
+        <label for="">Genero: </label>
+        <select name="genero" id="">
+            <option value="acao">Ação</option>
+            <option value="comedia">Comédia</option>
+            <option value="drama">Drama</option>
+        </select>
+        <button>Enviar</button>
+    </form>
+</body>
+</html>

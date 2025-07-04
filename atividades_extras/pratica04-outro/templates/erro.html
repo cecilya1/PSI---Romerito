@@ -1,0 +1,8 @@
+{% with erros = get_flashed_messages(category_filter=['erro'])  %}
+    {% if erros %}
+        {% for mensagem in erros %}
+            <p>{{mensagem}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+

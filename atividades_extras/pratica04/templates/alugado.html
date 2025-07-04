@@ -1,0 +1,7 @@
+{% with alugados = get_flashed_messages(category_filter='alugado')  %}
+    {% if alugados %}
+        {% for msg in alugados %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}

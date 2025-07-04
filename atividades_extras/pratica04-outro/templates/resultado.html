@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Resultado
+{% endblock %}
+
+{% block conteudo %}
+    {% for nome, quant in resultado_votos.items() %}
+    <p>{{nome}} -- {{quant}}</p>
+    {% endfor %}
+{% endblock %}

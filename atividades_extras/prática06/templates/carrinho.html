@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Carrinho
+{% endblock %}
+
+{% block conteudo %}
+<div>
+    <h1>Meu Carrinho</h1>
+    {% set soma = 0 %}
+    {% for k,v in carrinho.items() %}
+    <ul>
+        <li class="produto"> 
+            <p>{{k}} -- {{v[0]*v[1]}}</p>  
+            {% set soma = soma + (v[0]*v[1]) %}            
+        </li>
+    </ul>   
+    {% endfor %}
+    <h2>Total: <span>{{soma}}</span> </h2>
+    <form action="{{url_for('remover_prod')}}" method="post">
+        <button>Limpar</button>
+    </form>
+</div>
+{% endblock %}

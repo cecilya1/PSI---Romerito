@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Página inicial
+{% endblock %}
+
+{% block conteudo %}
+    {% if current_user.is_authenticated %}
+        <p>Sejá Bem-Vindo(a), {{current_user.id}}</p>
+    {% else %}
+        <p>Sejá Bem-Vindo(a)</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Livros
+{% endblock %}
+
+{% include 'alugado.html'   %}
+
+{% block conteudo %}
+    <form action="{{ url_for('livros') }}" method="post">
+        {% for livro in livros_al %}
+            <div class="livro">
+                {% for k, v  in livro.items() %}
+                    <div>{{k}}: {{v}}</div>
+                {% endfor %}
+                <button name="livro" value="{{livro['titulo']}}">Alugar</button>
+            </div>
+        {% endfor %}
+    </form>
+{% endblock %}

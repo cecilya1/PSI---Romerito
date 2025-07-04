@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+Remover
+{% endblock %}
+
+
+{% block conteudo %}
+
+<form action="{{ url_for() }}" method="post">
+    <input type="text" name="texto" >
+    <button>Remover</button>
+</form>
+
+{% endblock %}

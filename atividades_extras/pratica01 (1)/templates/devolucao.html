@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Devolução
+{% endblock %}
+
+{% block conteudo %}
+    <form action="{{ url_for('devolucao') }}" method="post">
+        {% for k, dados in historico[current_user.nome].items() %}
+            {% for nome, livros in dados.items() %}
+            {% if livros == 'alugado' %}
+            <p>{{k}}</p>
+            <button name="livro" value="{{ k }}">Devolver</button>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </form>
+{% endblock %}

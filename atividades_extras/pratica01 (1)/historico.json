@@ -1,0 +1,12 @@
+{
+    "ana": {
+        "O Pequeno Principe": {
+            "status": "alugado",
+            "quant": 4
+        },
+        "Dom Casmurro": {
+            "status": "devolvido",
+            "quant": 0
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+    Livros
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Livros</h1>
+    <form action="{{ url_for('livros') }}" method="post">
+        {% for k, dados in livros_al.items() %}
+        <p>{{k}}</p>
+        {% if dados['alugados'] == dados['total'] %}
+            <p>Indisponível</p>
+        {% else %}
+            <button name="livro" value="{{k}}" >Alugar</button>
+        {% endif %}
+        {% endfor %}
+    </form>
+{% endblock %}

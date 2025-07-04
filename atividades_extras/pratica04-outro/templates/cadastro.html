@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Cadastro
+{% endblock %}
+
+{% include 'erro.html' %}
+
+{% block conteudo %}
+    <h2>Cadastro</h2>
+    <form action="{{ url_for('cadastro') }}" method="post">
+        <input type="text" name="nome" placeholder="Nome...">
+        <input type="password" name="senha" placeholder="Senha...">
+        <button>Enviar</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Votação
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Votação</h1>
+    <form action="{{ url_for('votacao') }}" method="post">
+        <select name="voto" id="">
+            <option value="carla">Carla</option>
+            <option value="breno">Breno</option>
+            <option value="paulo">Paulo</option>
+            <option value="laura">Laura</option>
+        </select>
+        <button>Votar</button>
+    </form>
+{% endblock %}

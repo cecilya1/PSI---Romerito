@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Histórico
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Histórico de {{current_user.id}}</h1>
+    {% for item in historico_pessoal %}
+        <p>{{item}}  --   Alugado</p>
+    {% endfor %}
+{% endblock %}

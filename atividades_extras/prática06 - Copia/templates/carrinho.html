@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Carrinho
+{% endblock %}
+
+{% block conteudo %}
+<div>
+    <h1>Meu Carrinho</h1>
+    {% set ns = namespace(soma=0) %}
+    {% for k,v in carrinho.items() %}
+    {% if k == current_user.id %}
+    {% for prod,lista in v.items() %}
+    <ul>
+        <li class="produto"> 
+            <p>{{prod}} -- {{lista[0]*lista[1]}}</p>  
+            {% set ns.soma = ns.soma + (lista[0] * lista[1]) %}            
+        </li>
+    </ul>   
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+    <h2>Total: <span>{{ns.soma}}</span> </h2>
+    <form action="{{url_for('remover_prod')}}" method="post">
+        <button>Limpar</button>
+    </form>
+    <form action="{{url_for('compra')}}" method="post">
+        <button>Comprar</button>
+    </form>
+</div>
+{% endblock %}

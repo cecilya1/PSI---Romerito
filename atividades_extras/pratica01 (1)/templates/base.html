@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <nav>
+        <p><a href="{{ url_for('login') }}">Login</a></p>
+        <p><a href="{{ url_for('cadastro') }}">Cadastro</a></p>
+
+        {% if current_user.is_authenticated %}
+        <p><a href="">Logout</a></p>
+        <p><a href="{{ url_for('livros') }}">Livros</a></p>
+        <p><a href="{{ url_for('devolucao') }}">Devolução</a></p>
+        {% endif %}
+    </nav>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+</body>
+</html>
