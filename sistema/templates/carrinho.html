@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+</head>
+<body>
+    <h1>Ver seu carrinho</h1>
+
+
+    <header>
+        <h2>Seu Carrinho</h2>
+    </header>
+    
+    <div class="carrinho-container">
+        <table class="carrinho-tabela">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in itens.keys() %}
+                <tr>
+                    <td>{{ item }}</td>
+                    <td>R$ {{ "%.2f"|format(itens[item][0]) }}</td>
+                    <td>{{ itens[item][1] }}</td>
+                    <td>{{ itens[item][1]*itens[item][0] }}</td>
+                </tr>
+                {% endfor %}
+                <tr class="total-row">
+                    <td>Total do carrinho: </td>
+                    <td><strong>R$ {{ total }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <form action="{{ url_for('esvaziar') }}" method="post">
+            <button>Esvaziar</button>
+        </form>
+    </div>
+</body>
+</html>

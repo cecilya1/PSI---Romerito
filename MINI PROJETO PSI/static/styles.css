@@ -1,0 +1,379 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* cabeçalho de todas as páginas */
+
+header {
+    width: 100vw;
+    height: 15vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+/* css da página produtos */
+
+header h1 {
+    color: white;
+}
+
+.content {
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+}
+
+    /* background dos produtos */
+.lista_de_produtos {
+    background-color: #EBEBEB;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    gap: 20px;
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 1px black solid;
+    border-right: 1px black solid; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+    /* texto */
+
+.preco {
+    font-family: "Playfair Display";
+    font-size: 16px;
+}
+
+.produto img {
+    width: 250px;
+    height: 200px;
+}
+
+.produto button {
+    background-color: white;
+    width: 150px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.produto button:hover {
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+}
+
+.produto .nome{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* css da página base */
+
+.paginas {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.paginas a {
+    display: flex;
+    width: 150px;
+    height: 50px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: #EBEBEB;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.paginas a:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* css da página login */
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    height: 470px;
+    width: 400px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form form input {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 250px;
+}
+
+.form form input:focus {
+    border: 2px solid rgb(76, 76, 255);
+    outline: none;
+}
+
+.form {
+    height: 85vh;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form form button {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.form form button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* css da pagina de index*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.links-iniciais {
+    display: flex;
+    
+    align-items: center;
+    /* margin: 2rem auto;
+    width: 100%;
+    max-width: 400px; */
+    gap: 20px;
+
+}
+
+.links-iniciais a, .links-iniciais button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    font-weight: bold;
+    background-color: #EBEBEB;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+
+}
+
+.links-iniciais a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* css da pagina de cadastro */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header > h2{
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+.cadastro {
+    height: 85vh;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro form {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 400px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+.cadastro form h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cadastro form label {
+    align-items: center;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cadastro form input {
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+}
+
+.cadastro form input:focus {
+    border: 2px solid rgb(76, 76, 255);
+    outline: none;
+}
+
+.cadastro form button {
+    background-color: white;
+    padding: 12px;
+    width: 80%;
+    border: 1px solid black;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cadastro form button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Estilo da tabela do carrinho */
+.carrinho-tabela {
+    margin-top: 30px;
+    margin-left: 25vw;
+    width: 100vw;
+    max-width: 900px;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+.carrinho-tabela thead {
+    background-color: #000000;
+    color: white;
+}
+
+.carrinho-tabela th,
+.carrinho-tabela td {
+    padding: 16px 12px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Total */
+.carrinho-tabela .total-row {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Botão de esvaziar */
+.carrinho-container button {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho-container button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .carrinho-tabela th,
+    .carrinho-tabela td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-esvaziar button {
+        width: 100%;
+    }
+}

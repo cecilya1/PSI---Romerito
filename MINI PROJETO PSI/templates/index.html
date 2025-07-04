@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+</head>
+<body>
+    <!-- <header>
+        <h1>Pagina inicial</h1>
+        <div class="links-iniciais">
+            <p><a href="{{ url_for('login') }}">Login</a></p>
+            <p><a href="{{ url_for('cadastro') }}">Cadastro</a></p>
+            <p><a href="{{ url_for('produtos') }}">Produtos</a></p>
+            <form action="{{ url_for('logout') }}" method="post"><button>Sair</button></form>
+            <p><a href="{{ url_for('carrinho') }}">Carrinho</a></p>
+        </div>
+    </header> -->
+    {% extends "base.html" %}
+
+    {% block title %}Página inicial{% endblock %}
+
+    {% block content %}
+    {% if request.cookies.get('nome') %}
+        <h2>Bem-vindo, {{request.cookies.get('nome')}}!</h2>
+    {% endif %}
+    {% endblock %}
+    
+</body>
+</html>

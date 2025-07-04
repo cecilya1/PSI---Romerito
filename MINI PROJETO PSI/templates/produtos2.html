@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block title %}Produtos{% endblock %}
+
+    {% block content %}
+    <div class="lista_de_produtos">
+        <form class="produto" action="{{ url_for('produtos') }}" method="POST">
+            <img src="/static/motoharanha.jpg" alt="">
+            <p class="nome">Moto Homem-Aranha Yamaha</p>
+            <p class="preco">R$12.199,00</p>
+            <button name="produto" value="Moto Homem-Aranha Yamaha">Comprar</button>
+        </form>
+        <form class="produto" action="{{ url_for('produtos') }}" method="POST">
+            <img src="/static/spinner.jpg" alt="">
+            <p class="nome">Fidget Spinner</p>
+            <p class="preco">R$9,99</p>
+            <button name="produto" value="Fidget Spinner">Comprar</button>
+        </form>
+        <form class="produto" action="{{ url_for('produtos') }}" method="POST">
+            <img src="/static/controleps2.jpg" alt="">
+            <p class="nome">Controle PS2 Transparente Aqua Lava</p>
+            <p class="preco">R$199,90</p>
+            <button name="produto" value="Controle PS2 Transparente Aqua Lava">Comprar</button>
+        </form>
+        <form class="produto" action="{{ url_for('produtos') }}" method="POST">
+            <img src="/static/charizard.jpg" alt="">
+            <p class="nome">Charizard 1st edition PSA 10</p>
+            <p class="preco">R$1.000.000,00</p>
+            <button name="produto" value="Charizard 1st edition PSA 10">Comprar</button>
+        </form>
+        <form class="produto" action="{{ url_for('produtos') }}" method="POST">
+            <img src="/static/agua_s_gas.jpg" alt="">
+            <p class="nome">Água mineral</p>
+            <p class="preco">R$2,50</p>
+            <button name="produto" value="Água mineral">Comprar</button>
+        </form>
+        <form class="produto" action="{{ url_for('produtos') }}" method="POST">
+            <img src="/static/agua_c_gas.jpg" alt="">
+            <p class="nome">Água mineral com gás</p>
+            <p class="preco">R$2,00</p>
+            <button name="produto" value="Água mineral com gás">Comprar</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

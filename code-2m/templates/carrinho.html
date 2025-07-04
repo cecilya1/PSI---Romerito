@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Carrinho
+{% endblock %}
+
+{% block conteudo %}
+<div>
+    <h1>Meu Carrinho</h1>
+
+    {% for k in carrinho %}
+    <ul>
+        <li class="produto"> 
+            <p>{{k}}</p>                  
+        </li>
+    </ul>   
+    {% endfor %}
+    <h2>Total: <span>{{valor}}</span> </h2>
+    <form action="{{url_for('remover_prod')}}" method="post">
+        <button>Limpar</button>
+    </form>
+</div>
+{% endblock %}

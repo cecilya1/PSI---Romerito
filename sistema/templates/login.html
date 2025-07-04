@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+    <div class="form">
+        <form action="{{url_for('login')}}" method="post">
+            <h1>Digite seus dados</h1>
+            <label for="nome">Nome</label>
+            <input type="text", name="nome", placeholder="Digite seu nome de usuario">
+            <label for="senha">Senha</label>
+            <input type="password", name="senha", placeholder="Digite sua senha">
+            <button name="login">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <h2>Cadastro</h2>
+    </header>
+    <div class="cadastro">
+        <form action="{{ url_for('cadastro') }}" method="post">
+            <h1>Digite seus dados</h1>
+            <label for="nome">Usuário</label>
+            <input name="nome" placeholder="Nome"><br>
+            <label for="senha">Senha</label>
+            <input name="senha" placeholder="Senha" type="password"><br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+</body>
+</html>
